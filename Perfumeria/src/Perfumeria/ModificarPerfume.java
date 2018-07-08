@@ -17,7 +17,7 @@ public class ModificarPerfume extends javax.swing.JFrame {
         initComponents();
         cbxnombre();
     }
-    public void cbxnombre(){
+    private void cbxnombre(){
         cbonombre.addItem(declaracionvariables.nombre0);
         cbonombre.addItem(declaracionvariables.nombre1);
         cbonombre.addItem(declaracionvariables.nombre2);

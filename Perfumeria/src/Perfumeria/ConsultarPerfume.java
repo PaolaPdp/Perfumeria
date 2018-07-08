@@ -24,7 +24,7 @@ public class ConsultarPerfume extends javax.swing.JFrame {
         
     }
    
-    public void combonombre(){
+    private void combonombre(){
         //declaracionvariables cons=new declaracionvariables();
         
         cbonombre.addItem(declaracionvariables.nombre0);
