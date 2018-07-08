@@ -9,9 +9,7 @@ package perfumeria;
  *
  * @author Paola
  */
-public class ModificarPerfume extends javax.swing.JFrame {
-
-   
+public class ModificarPerfume extends javax.swing.JFrame {    
     /**
      * Creates new form ModificarPerfume
      */
@@ -131,7 +129,7 @@ public class ModificarPerfume extends javax.swing.JFrame {
 
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
         // TODO add your handling code here:
-        //System.exit(0);
+        dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
 
     private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
@@ -169,6 +167,7 @@ public class ModificarPerfume extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                new ModificarPerfume().setVisible(true);
             }
         });
     }

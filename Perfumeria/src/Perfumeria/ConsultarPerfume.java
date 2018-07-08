@@ -20,9 +20,20 @@ public class ConsultarPerfume extends javax.swing.JFrame {
     
     public ConsultarPerfume() {
         initComponents();
-           
+        combonombre();
+                   
     }
-   
+    
+    public void combonombre(){
+        //declaracionvariables cons=new declaracionvariables();
+        
+        cbonombre.addItem(declaracionvariables.nombre0);
+        cbonombre.addItem(declaracionvariables.nombre1);
+        cbonombre.addItem(declaracionvariables.nombre2);
+        cbonombre.addItem(declaracionvariables.nombre3);
+        cbonombre.addItem(declaracionvariables.nombre4);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -142,8 +153,8 @@ public class ConsultarPerfume extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
-        // TODO add your handling code here:
-        //System.exit(0);        
+        // TODO add your handling code here:        
+        dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
 
     public void actionPerformed(java.awt.event.ActionEvent evt) { 
@@ -156,7 +167,8 @@ public class ConsultarPerfume extends javax.swing.JFrame {
     }//GEN-LAST:event_cbonombreMouseClicked
 
     private void txtprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprecioActionPerformed
-        // TODO add your handling code here:        
+        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtprecioActionPerformed
 
     private void cbonombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbonombreMousePressed
@@ -171,7 +183,7 @@ public class ConsultarPerfume extends javax.swing.JFrame {
 
     private void cbonombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbonombreItemStateChanged
         // TODO add your handling code here:
-          
+        
     }//GEN-LAST:event_cbonombreItemStateChanged
 
     /**
@@ -205,7 +217,7 @@ public class ConsultarPerfume extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-              
+                new ConsultarPerfume().setVisible(true);
             }
         });
     }
