@@ -67,22 +67,9 @@ public class ConsultarPerfume extends javax.swing.JFrame {
 
         casa.setText("Casa");
 
-        cbonombre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbonombreMouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                cbonombreMousePressed(evt);
-            }
-        });
         cbonombre.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbonombreItemStateChanged(evt);
-            }
-        });
-        cbonombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                cbonombreKeyPressed(evt);
             }
         });
 
@@ -160,30 +147,18 @@ public class ConsultarPerfume extends javax.swing.JFrame {
     public void actionPerformed(java.awt.event.ActionEvent evt) { 
         
     }
-    private void cbonombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbonombreMouseClicked
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_cbonombreMouseClicked
-
     private void txtprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprecioActionPerformed
         // TODO add your handling code here:       
     }//GEN-LAST:event_txtprecioActionPerformed
 
-    private void cbonombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbonombreMousePressed
-        // TODO add your handling code here:
-       
-        
-    }//GEN-LAST:event_cbonombreMousePressed
-
-    private void cbonombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cbonombreKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbonombreKeyPressed
-
     private void cbonombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbonombreItemStateChanged
         // TODO add your handling code here:
         String nombre = cbonombre.getSelectedItem();
-        
+                txtprecio.setEnabled(false);
+                txtcontenido.setEnabled(false);
+                txtañolanzamiento.setEnabled(false);
+                txtcasa.setEnabled(false);
+                
             if(nombre==declaracionvariables.nombre0)
                 {  
                   this.txtprecio.setText(String.valueOf(declaracionvariables.precio0));
