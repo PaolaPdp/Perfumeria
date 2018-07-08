@@ -21,9 +21,9 @@ public class ConsultarPerfume extends javax.swing.JFrame {
     public ConsultarPerfume() {
         initComponents();
         combonombre();
-                   
+        
     }
-    
+   
     public void combonombre(){
         //declaracionvariables cons=new declaracionvariables();
         
@@ -167,8 +167,7 @@ public class ConsultarPerfume extends javax.swing.JFrame {
     }//GEN-LAST:event_cbonombreMouseClicked
 
     private void txtprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprecioActionPerformed
-        // TODO add your handling code here:
-        
+        // TODO add your handling code here:       
     }//GEN-LAST:event_txtprecioActionPerformed
 
     private void cbonombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbonombreMousePressed
@@ -183,7 +182,44 @@ public class ConsultarPerfume extends javax.swing.JFrame {
 
     private void cbonombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbonombreItemStateChanged
         // TODO add your handling code here:
+        String nombre = cbonombre.getSelectedItem();
         
+            if(nombre==declaracionvariables.nombre0)
+                {  
+                  this.txtprecio.setText(String.valueOf(declaracionvariables.precio0));
+                  this.txtcontenido.setText(String.valueOf(declaracionvariables.contenido0));
+                  this.txtañolanzamiento.setText(String.valueOf(declaracionvariables.año0));
+                  this.txtcasa.setText(declaracionvariables.casa0);
+                }
+            else if(nombre==declaracionvariables.nombre1)
+                {  
+                  this.txtprecio.setText(String.valueOf(declaracionvariables.precio1));
+                  this.txtcontenido.setText(String.valueOf(declaracionvariables.contenido1));
+                  this.txtañolanzamiento.setText(String.valueOf(declaracionvariables.año1));
+                  this.txtcasa.setText(declaracionvariables.casa1);
+                }
+            else if(nombre==declaracionvariables.nombre2)
+                {  
+                  this.txtprecio.setText(String.valueOf(declaracionvariables.precio2));
+                  this.txtcontenido.setText(String.valueOf(declaracionvariables.contenido2));
+                  this.txtañolanzamiento.setText(String.valueOf(declaracionvariables.año2));
+                  this.txtcasa.setText(declaracionvariables.casa1);
+                }
+            else if(nombre==declaracionvariables.nombre3)
+                {  
+                  this.txtprecio.setText(String.valueOf(declaracionvariables.precio3));
+                  this.txtcontenido.setText(String.valueOf(declaracionvariables.contenido3));
+                  this.txtañolanzamiento.setText(String.valueOf(declaracionvariables.año3));
+                  this.txtcasa.setText(declaracionvariables.casa1);
+                }
+            else if(nombre==declaracionvariables.nombre4)
+                {  
+                  this.txtprecio.setText(String.valueOf(declaracionvariables.precio4));
+                  this.txtcontenido.setText(String.valueOf(declaracionvariables.contenido4));
+                  this.txtañolanzamiento.setText(String.valueOf(declaracionvariables.año4));
+                  this.txtcasa.setText(declaracionvariables.casa1);
+                }
+                       
     }//GEN-LAST:event_cbonombreItemStateChanged
 
     /**
