@@ -60,7 +60,7 @@ public class frmmodificar extends javax.swing.JFrame {
         txtlanzamiento.setText(String.valueOf(vperfume.año4));
         txtcasa.setText(vperfume.casa1);
     }
-    
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -93,6 +93,11 @@ public class frmmodificar extends javax.swing.JFrame {
         });
 
         btngrabar.setText("Grabar");
+        btngrabar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngrabarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nombre");
 
@@ -190,10 +195,32 @@ public class frmmodificar extends javax.swing.JFrame {
              //default: categoria();
          }
     }//GEN-LAST:event_cbxnombreItemStateChanged
-
+    
+    //Metodo encargado de guardar contenido a la memoria pasando parametros
+    public void guardarDatos(double pcio, double cont, int anio, String casa){
+        double precio0 = pcio;
+        double contenido0 = cont;
+        int lanzamiento0 = anio;
+        String casa0 = casa;
+        
+        //imprime los datos editados "Prueba"
+        //System.out.println(precio0);
+    }
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
         dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
+    
+    private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
+        //se combierte los parametros al tipo de variable del metodo guardarDatos
+        guardarDatos(
+                Double.parseDouble(txtprecio.getText()),
+                Double.parseDouble(txtcontenido.getText()),
+                Integer.parseInt(txtlanzamiento.getText()),
+                txtcasa.getText()
+        );
+        //se cierra el dialogo al guardar
+        dispose();
+    }//GEN-LAST:event_btngrabarActionPerformed
 
     /**
      * @param args the command line arguments
