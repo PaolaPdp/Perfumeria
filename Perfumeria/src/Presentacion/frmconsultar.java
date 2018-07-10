@@ -30,7 +30,7 @@ public class frmconsultar extends javax.swing.JFrame {
     private void mostrarDatosDefault(){
         txtprecio.setText(String.valueOf(vperfume.precio0));
         txtcontenido.setText(String.valueOf(vperfume.contenido0));
-        txtañolanzamiento.setText(String.valueOf(vperfume.año0));
+        txtlanzamiento.setText(String.valueOf(vperfume.año0));
         txtcasa.setText(vperfume.casa0);  
     }
     
@@ -38,20 +38,54 @@ public class frmconsultar extends javax.swing.JFrame {
     private void inhabilitar(){
         txtprecio.setEnabled(false);
         txtcontenido.setEnabled(false);
-        txtañolanzamiento.setEnabled(false);
+        txtlanzamiento.setEnabled(false);
         txtcasa.setEnabled(false);
     }
     
     //muestra por defecto datos en la primera casilla comboBox
     private void combonombre(){
         //declaracionvariables cons=new declaracionvariables();
-        cbonombre.addItem(vperfume.nombre0);
-        cbonombre.addItem(vperfume.nombre1);
-        cbonombre.addItem(vperfume.nombre2);
-        cbonombre.addItem(vperfume.nombre3);
-        cbonombre.addItem(vperfume.nombre4);
+        cbxnombre.addItem(vperfume.nombre0);
+        cbxnombre.addItem(vperfume.nombre1);
+        cbxnombre.addItem(vperfume.nombre2);
+        cbxnombre.addItem(vperfume.nombre3);
+        cbxnombre.addItem(vperfume.nombre4);
     }
-
+    
+    private void categoria(){
+        txtprecio.setText(String.valueOf(vperfume.precio0));
+        txtcontenido.setText(String.valueOf(vperfume.contenido0));
+        txtlanzamiento.setText(String.valueOf(vperfume.año0));
+        txtcasa.setText(vperfume.casa0);
+    }
+    
+    private void categoriaUno(){
+        txtprecio.setText(String.valueOf(vperfume.precio1));
+        txtcontenido.setText(String.valueOf(vperfume.contenido1));
+        txtlanzamiento.setText(String.valueOf(vperfume.año1));
+        txtcasa.setText(vperfume.casa1);
+    }
+    
+    private void categoriaDos(){
+        txtprecio.setText(String.valueOf(vperfume.precio2));
+        txtcontenido.setText(String.valueOf(vperfume.contenido2));
+        txtlanzamiento.setText(String.valueOf(vperfume.año2));
+        txtcasa.setText(vperfume.casa1);
+    }
+    
+    private void categoriaTres(){
+        txtprecio.setText(String.valueOf(vperfume.precio3));
+        txtcontenido.setText(String.valueOf(vperfume.contenido3));
+        txtlanzamiento.setText(String.valueOf(vperfume.año3));
+        txtcasa.setText(vperfume.casa1);
+    }
+    
+    private void categoriaCuatro(){
+        txtprecio.setText(String.valueOf(vperfume.precio4));
+        txtcontenido.setText(String.valueOf(vperfume.contenido4));
+        txtlanzamiento.setText(String.valueOf(vperfume.año4));
+        txtcasa.setText(vperfume.casa1);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -66,12 +100,12 @@ public class frmconsultar extends javax.swing.JFrame {
         precio = new java.awt.Label();
         contenido1 = new java.awt.Label();
         casa = new java.awt.Label();
-        cbonombre = new java.awt.Choice();
-        txtprecio = new java.awt.TextField();
-        txtcontenido = new java.awt.TextField();
-        txtañolanzamiento = new java.awt.TextField();
-        txtcasa = new java.awt.TextField();
-        btncerrar = new java.awt.Button();
+        cbxnombre = new javax.swing.JComboBox<>();
+        btncerrar = new javax.swing.JButton();
+        txtprecio = new javax.swing.JTextField();
+        txtcontenido = new javax.swing.JTextField();
+        txtlanzamiento = new javax.swing.JTextField();
+        txtcasa = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,19 +119,13 @@ public class frmconsultar extends javax.swing.JFrame {
 
         casa.setText("Casa");
 
-        cbonombre.addItemListener(new java.awt.event.ItemListener() {
+        cbxnombre.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                cbonombreItemStateChanged(evt);
+                cbxnombreItemStateChanged(evt);
             }
         });
 
-        txtprecio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtprecioActionPerformed(evt);
-            }
-        });
-
-        btncerrar.setLabel("Cerrar");
+        btncerrar.setText("Cerrar");
         btncerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncerrarActionPerformed(evt);
@@ -111,105 +139,78 @@ public class frmconsultar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contenido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(añolanzamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(casa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtprecio, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                        .addComponent(txtcontenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtañolanzamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtcasa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cbonombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+                    .addComponent(casa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
+                        .addComponent(btncerrar)
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cbxnombre, 0, 116, Short.MAX_VALUE)
+                            .addComponent(txtprecio)
+                            .addComponent(txtcontenido)
+                            .addComponent(txtlanzamiento)
+                            .addComponent(txtcasa))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbonombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(contenido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btncerrar)
+                                        .addComponent(cbxnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(12, 12, 12)
+                                .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(contenido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtcontenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtañolanzamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(añolanzamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(añolanzamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtlanzamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(casa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtcasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
-        // TODO add your handling code here:        
-        dispose();
-    }//GEN-LAST:event_btncerrarActionPerformed
-
     public void actionPerformed(java.awt.event.ActionEvent evt) { 
         
     }
-    private void txtprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprecioActionPerformed
-        // TODO add your handling code here:       
-    }//GEN-LAST:event_txtprecioActionPerformed
+    private void cbxnombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxnombreItemStateChanged
+        int opcion = cbxnombre.getSelectedIndex();
+         
+         switch(opcion){
+             case 0: categoria(); break;
+             case 1: categoriaUno(); break;
+             case 2: categoriaDos(); break;
+             case 3: categoriaTres(); break;
+             case 4: categoriaCuatro(); break;
+             default: categoria();
+         }
+    }//GEN-LAST:event_cbxnombreItemStateChanged
 
-    private void cbonombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbonombreItemStateChanged
-
-        String nombre = cbonombre.getSelectedItem();
-
-            if(nombre==vperfume.nombre0)
-                {  
-                  this.txtprecio.setText(String.valueOf(vperfume.precio0));
-                  this.txtcontenido.setText(String.valueOf(vperfume.contenido0));
-                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año0));
-                  this.txtcasa.setText(vperfume.casa0);
-                }
-            else if(nombre==vperfume.nombre1)
-                {  
-                  this.txtprecio.setText(String.valueOf(vperfume.precio1));
-                  this.txtcontenido.setText(String.valueOf(vperfume.contenido1));
-                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año1));
-                  this.txtcasa.setText(vperfume.casa1);
-                }
-            else if(nombre==vperfume.nombre2)
-                {  
-                  this.txtprecio.setText(String.valueOf(vperfume.precio2));
-                  this.txtcontenido.setText(String.valueOf(vperfume.contenido2));
-                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año2));
-                  this.txtcasa.setText(vperfume.casa1);
-                }
-            else if(nombre==vperfume.nombre3)
-                {  
-                  this.txtprecio.setText(String.valueOf(vperfume.precio3));
-                  this.txtcontenido.setText(String.valueOf(vperfume.contenido3));
-                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año3));
-                  this.txtcasa.setText(vperfume.casa1);
-                }
-            else if(nombre==vperfume.nombre4)
-                {  
-                  this.txtprecio.setText(String.valueOf(vperfume.precio4));
-                  this.txtcontenido.setText(String.valueOf(vperfume.contenido4));
-                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año4));
-                  this.txtcasa.setText(vperfume.casa1);
-                } 
-    }//GEN-LAST:event_cbonombreItemStateChanged
+    private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
+        //dispose();
+    }//GEN-LAST:event_btncerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,15 +257,15 @@ public class frmconsultar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label añolanzamiento;
-    private java.awt.Button btncerrar;
+    private javax.swing.JButton btncerrar;
     private java.awt.Label casa;
-    private java.awt.Choice cbonombre;
+    private javax.swing.JComboBox<String> cbxnombre;
     private java.awt.Label contenido1;
     private java.awt.Label nombre;
     private java.awt.Label precio;
-    private java.awt.TextField txtañolanzamiento;
-    private java.awt.TextField txtcasa;
-    private java.awt.TextField txtcontenido;
-    private java.awt.TextField txtprecio;
+    private javax.swing.JTextField txtcasa;
+    private javax.swing.JTextField txtcontenido;
+    private javax.swing.JTextField txtlanzamiento;
+    private javax.swing.JTextField txtprecio;
     // End of variables declaration//GEN-END:variables
 }

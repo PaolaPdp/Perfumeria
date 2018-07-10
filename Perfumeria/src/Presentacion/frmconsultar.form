@@ -23,61 +23,72 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="nombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="precio" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="contenido1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="añolanzamiento" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="casa" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="precio" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="nombre" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtprecio" pref="116" max="32767" attributes="0"/>
-                      <Component id="txtcontenido" max="32767" attributes="0"/>
-                      <Component id="txtañolanzamiento" max="32767" attributes="0"/>
-                      <Component id="txtcasa" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="208" max="32767" attributes="0"/>
+                      <Component id="btncerrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="cbonombre" alignment="0" min="-2" pref="116" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="cbxnombre" pref="116" max="32767" attributes="0"/>
+                          <Component id="txtprecio" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtcontenido" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtlanzamiento" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtcasa" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
-              <Component id="btncerrar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="nombre" min="-2" max="-2" attributes="0"/>
-                  <Component id="btncerrar" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbonombre" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="precio" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtprecio" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="contenido1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btncerrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cbxnombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="nombre" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="precio" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txtprecio" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="contenido1" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="txtcontenido" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtañolanzamiento" max="32767" attributes="0"/>
-                  <Component id="añolanzamiento" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="añolanzamiento" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlanzamiento" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="casa" min="-2" max="-2" attributes="0"/>
                   <Component id="txtcasa" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="32" max="32767" attributes="0"/>
+              <EmptySpace pref="27" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -108,29 +119,34 @@
         <Property name="text" type="java.lang.String" value="Casa"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Choice" name="cbonombre">
-      <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cbonombreItemStateChanged"/>
-      </Events>
-    </Component>
-    <Component class="java.awt.TextField" name="txtprecio">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtprecioActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="java.awt.TextField" name="txtcontenido">
-    </Component>
-    <Component class="java.awt.TextField" name="txta&#xf1;olanzamiento">
-    </Component>
-    <Component class="java.awt.TextField" name="txtcasa">
-    </Component>
-    <Component class="java.awt.Button" name="btncerrar">
+    <Component class="javax.swing.JComboBox" name="cbxnombre">
       <Properties>
-        <Property name="label" type="java.lang.String" value="Cerrar"/>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cbxnombreItemStateChanged"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btncerrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cerrar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btncerrarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtprecio">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcontenido">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtlanzamiento">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcasa">
     </Component>
   </SubComponents>
 </Form>
