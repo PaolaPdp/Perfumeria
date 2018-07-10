@@ -33,12 +33,14 @@
                   <Component id="casa" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="cbonombre" pref="116" max="32767" attributes="0"/>
-                  <Component id="txtprecio" max="32767" attributes="0"/>
-                  <Component id="txtcontenido" max="32767" attributes="0"/>
-                  <Component id="txtañolanzamiento" max="32767" attributes="0"/>
-                  <Component id="txtcasa" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtprecio" pref="116" max="32767" attributes="0"/>
+                      <Component id="txtcontenido" max="32767" attributes="0"/>
+                      <Component id="txtañolanzamiento" max="32767" attributes="0"/>
+                      <Component id="txtcasa" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="cbonombre" alignment="0" min="-2" pref="116" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="51" max="32767" attributes="0"/>
               <Component id="btncerrar" min="-2" max="-2" attributes="0"/>
@@ -52,8 +54,8 @@
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="nombre" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbonombre" min="-2" max="-2" attributes="0"/>
                   <Component id="btncerrar" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbonombre" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">

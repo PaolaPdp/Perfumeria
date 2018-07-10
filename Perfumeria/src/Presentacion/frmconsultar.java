@@ -22,12 +22,29 @@ public class frmconsultar extends javax.swing.JFrame {
     public frmconsultar() {
         initComponents();
         combonombre();
-        
+        inhabilitar();
+        mostrarDatosDefault();
     }
    
+    //este metodo muestra datos por defecto al inicio del formulario consultar
+    private void mostrarDatosDefault(){
+        txtprecio.setText(String.valueOf(vperfume.precio0));
+        txtcontenido.setText(String.valueOf(vperfume.contenido0));
+        txtañolanzamiento.setText(String.valueOf(vperfume.año0));
+        txtcasa.setText(vperfume.casa0);  
+    }
+    
+    //metodo que no permite editar datos de los JTextField 
+    private void inhabilitar(){
+        txtprecio.setEnabled(false);
+        txtcontenido.setEnabled(false);
+        txtañolanzamiento.setEnabled(false);
+        txtcasa.setEnabled(false);
+    }
+    
+    //muestra por defecto datos en la primera casilla comboBox
     private void combonombre(){
         //declaracionvariables cons=new declaracionvariables();
-        
         cbonombre.addItem(vperfume.nombre0);
         cbonombre.addItem(vperfume.nombre1);
         cbonombre.addItem(vperfume.nombre2);
@@ -100,12 +117,13 @@ public class frmconsultar extends javax.swing.JFrame {
                     .addComponent(añolanzamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(casa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cbonombre, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                    .addComponent(txtprecio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtcontenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtañolanzamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtcasa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtprecio, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                        .addComponent(txtcontenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtañolanzamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtcasa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cbonombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41))
@@ -116,8 +134,8 @@ public class frmconsultar extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbonombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbonombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,13 +171,9 @@ public class frmconsultar extends javax.swing.JFrame {
     }//GEN-LAST:event_txtprecioActionPerformed
 
     private void cbonombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbonombreItemStateChanged
-        // TODO add your handling code here:
+
         String nombre = cbonombre.getSelectedItem();
-                txtprecio.setEnabled(false);
-                txtcontenido.setEnabled(false);
-                txtañolanzamiento.setEnabled(false);
-                txtcasa.setEnabled(false);
-                
+
             if(nombre==vperfume.nombre0)
                 {  
                   this.txtprecio.setText(String.valueOf(vperfume.precio0));
@@ -194,8 +208,7 @@ public class frmconsultar extends javax.swing.JFrame {
                   this.txtcontenido.setText(String.valueOf(vperfume.contenido4));
                   this.txtañolanzamiento.setText(String.valueOf(vperfume.año4));
                   this.txtcasa.setText(vperfume.casa1);
-                }
-                       
+                } 
     }//GEN-LAST:event_cbonombreItemStateChanged
 
     /**
