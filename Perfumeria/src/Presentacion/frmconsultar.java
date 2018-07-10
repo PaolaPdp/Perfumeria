@@ -23,15 +23,6 @@ public class frmconsultar extends javax.swing.JFrame {
         initComponents();
         combonombre();
         inhabilitar();
-        mostrarDatosDefault();
-    }
-   
-    //este metodo muestra datos por defecto al inicio del formulario consultar
-    private void mostrarDatosDefault(){
-        txtprecio.setText(String.valueOf(vperfume.precio0));
-        txtcontenido.setText(String.valueOf(vperfume.contenido0));
-        txtlanzamiento.setText(String.valueOf(vperfume.año0));
-        txtcasa.setText(vperfume.casa0);  
     }
     
     //metodo que no permite editar datos de los JTextField 
@@ -204,12 +195,12 @@ public class frmconsultar extends javax.swing.JFrame {
              case 2: categoriaDos(); break;
              case 3: categoriaTres(); break;
              case 4: categoriaCuatro(); break;
-             default: categoria();
+             //default: categoria();
          }
     }//GEN-LAST:event_cbxnombreItemStateChanged
 
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
-        //dispose();
+        dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
 
     /**
