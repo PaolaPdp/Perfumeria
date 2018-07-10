@@ -3,26 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package perfumeria;
-
+package Presentacion;
+import Datos.vperfume;
+import java.awt.event.*;
+//import perfumeria.declaracionvariables;
 /**
  *
  * @author Paola
  */
-public class ModificarPerfume extends javax.swing.JFrame {    
+public class frmconsultar extends javax.swing.JFrame {
+
     /**
-     * Creates new form ModificarPerfume
+     * Creates new form ConsultarPerfume
      */
-    public ModificarPerfume() {
+    
+    
+    
+    public frmconsultar() {
         initComponents();
-        cbxnombre();
+        combonombre();
+        
     }
-    private void cbxnombre(){
-        cbonombre.addItem(declaracionvariables.nombre0);
-        cbonombre.addItem(declaracionvariables.nombre1);
-        cbonombre.addItem(declaracionvariables.nombre2);
-        cbonombre.addItem(declaracionvariables.nombre3);
-        cbonombre.addItem(declaracionvariables.nombre4);
+   
+    private void combonombre(){
+        //declaracionvariables cons=new declaracionvariables();
+        
+        cbonombre.addItem(vperfume.nombre0);
+        cbonombre.addItem(vperfume.nombre1);
+        cbonombre.addItem(vperfume.nombre2);
+        cbonombre.addItem(vperfume.nombre3);
+        cbonombre.addItem(vperfume.nombre4);
     }
 
     /**
@@ -35,42 +45,45 @@ public class ModificarPerfume extends javax.swing.JFrame {
     private void initComponents() {
 
         nombre = new java.awt.Label();
-        casa = new java.awt.Label();
+        añolanzamiento = new java.awt.Label();
         precio = new java.awt.Label();
         contenido1 = new java.awt.Label();
-        añolanzamiento = new java.awt.Label();
+        casa = new java.awt.Label();
         cbonombre = new java.awt.Choice();
         txtprecio = new java.awt.TextField();
         txtcontenido = new java.awt.TextField();
         txtañolanzamiento = new java.awt.TextField();
         txtcasa = new java.awt.TextField();
         btncerrar = new java.awt.Button();
-        btngrabar = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         nombre.setText("Nombre");
 
-        casa.setText("Casa");
+        añolanzamiento.setText("Año de Lanzamiento");
 
         precio.setText("Precio (S/)");
 
         contenido1.setText("Contenido (ml)");
 
-        añolanzamiento.setText("Año de Lanzamiento");
+        casa.setText("Casa");
+
+        cbonombre.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbonombreItemStateChanged(evt);
+            }
+        });
+
+        txtprecio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtprecioActionPerformed(evt);
+            }
+        });
 
         btncerrar.setLabel("Cerrar");
         btncerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncerrarActionPerformed(evt);
-            }
-        });
-
-        btngrabar.setActionCommand("Grabar");
-        btngrabar.setLabel("Grabar");
-        btngrabar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngrabarActionPerformed(evt);
             }
         });
 
@@ -93,11 +106,9 @@ public class ModificarPerfume extends javax.swing.JFrame {
                     .addComponent(txtcontenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtañolanzamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtcasa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,16 +118,11 @@ public class ModificarPerfume extends javax.swing.JFrame {
                     .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbonombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(contenido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtcontenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -128,25 +134,75 @@ public class ModificarPerfume extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(casa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtcasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
         dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
 
-    private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
+    public void actionPerformed(java.awt.event.ActionEvent evt) { 
+        
+    }
+    private void txtprecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprecioActionPerformed
+        // TODO add your handling code here:       
+    }//GEN-LAST:event_txtprecioActionPerformed
+
+    private void cbonombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbonombreItemStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_btngrabarActionPerformed
+        String nombre = cbonombre.getSelectedItem();
+                txtprecio.setEnabled(false);
+                txtcontenido.setEnabled(false);
+                txtañolanzamiento.setEnabled(false);
+                txtcasa.setEnabled(false);
+                
+            if(nombre==vperfume.nombre0)
+                {  
+                  this.txtprecio.setText(String.valueOf(vperfume.precio0));
+                  this.txtcontenido.setText(String.valueOf(vperfume.contenido0));
+                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año0));
+                  this.txtcasa.setText(vperfume.casa0);
+                }
+            else if(nombre==vperfume.nombre1)
+                {  
+                  this.txtprecio.setText(String.valueOf(vperfume.precio1));
+                  this.txtcontenido.setText(String.valueOf(vperfume.contenido1));
+                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año1));
+                  this.txtcasa.setText(vperfume.casa1);
+                }
+            else if(nombre==vperfume.nombre2)
+                {  
+                  this.txtprecio.setText(String.valueOf(vperfume.precio2));
+                  this.txtcontenido.setText(String.valueOf(vperfume.contenido2));
+                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año2));
+                  this.txtcasa.setText(vperfume.casa1);
+                }
+            else if(nombre==vperfume.nombre3)
+                {  
+                  this.txtprecio.setText(String.valueOf(vperfume.precio3));
+                  this.txtcontenido.setText(String.valueOf(vperfume.contenido3));
+                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año3));
+                  this.txtcasa.setText(vperfume.casa1);
+                }
+            else if(nombre==vperfume.nombre4)
+                {  
+                  this.txtprecio.setText(String.valueOf(vperfume.precio4));
+                  this.txtcontenido.setText(String.valueOf(vperfume.contenido4));
+                  this.txtañolanzamiento.setText(String.valueOf(vperfume.año4));
+                  this.txtcasa.setText(vperfume.casa1);
+                }
+                       
+    }//GEN-LAST:event_cbonombreItemStateChanged
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+               
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -160,21 +216,27 @@ public class ModificarPerfume extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ModificarPerfume.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmconsultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ModificarPerfume.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmconsultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ModificarPerfume.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmconsultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ModificarPerfume.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmconsultar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
-         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ModificarPerfume().setVisible(true);
+                new frmconsultar().setVisible(true);
             }
         });
     }
@@ -182,7 +244,6 @@ public class ModificarPerfume extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label añolanzamiento;
     private java.awt.Button btncerrar;
-    private java.awt.Button btngrabar;
     private java.awt.Label casa;
     private java.awt.Choice cbonombre;
     private java.awt.Label contenido1;

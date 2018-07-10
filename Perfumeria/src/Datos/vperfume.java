@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package perfumeria;
+package Datos;
 
 /**
  *
  * @author Paola
  */
-public class declaracionvariables {
-    
-    
+public class vperfume {
     
     // Datos mínimos del primer perfume 
     public static String nombre0 = "ALCAZAR"; 
