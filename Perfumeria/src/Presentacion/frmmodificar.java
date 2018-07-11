@@ -10,6 +10,8 @@ import Datos.vperfume;
  * @author Paola
  */
 public class frmmodificar extends javax.swing.JFrame {    
+
+    double precio0;
     /**
      * Creates new form ModificarPerfume
      */
@@ -17,6 +19,7 @@ public class frmmodificar extends javax.swing.JFrame {
         initComponents();
         combonombre();
     }
+    
     private void combonombre(){
         //declaracionvariables cons=new declaracionvariables();
         cbxnombre.addItem(vperfume.nombre0);
@@ -198,13 +201,13 @@ public class frmmodificar extends javax.swing.JFrame {
     
     //Metodo encargado de guardar contenido a la memoria pasando parametros
     public void guardarDatos(double pcio, double cont, int anio, String casa){
-        double precio0 = pcio;
+        precio0 = pcio;
         double contenido0 = cont;
         int lanzamiento0 = anio;
         String casa0 = casa;
         
         //imprime los datos editados "Prueba"
-        //System.out.println(precio0);
+        System.out.println(precio0);
     }
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
         dispose();
@@ -219,7 +222,7 @@ public class frmmodificar extends javax.swing.JFrame {
                 txtcasa.getText()
         );
         //se cierra el dialogo al guardar
-        dispose();
+        //dispose();
     }//GEN-LAST:event_btngrabarActionPerformed
 
     /**
