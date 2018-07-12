@@ -65,5 +65,46 @@ public class vperfume {
  
     // Premio sorpresa 
     public static String premioSorpresa = "Un polo"; 
+
+    public static String getNombre0() {
+        return nombre0;
+    }
+
+    public static void setNombre0(String nombre0) {
+        vperfume.nombre0 = nombre0;
+    }
+
+    public static double getPrecio0() {
+        return precio0;
+    }
+
+    public static void setPrecio0(double precio0) {
+        vperfume.precio0 = precio0;
+    }
+
+    public static double getContenido0() {
+        return contenido0;
+    }
+
+    public static void setContenido0(double contenido0) {
+        vperfume.contenido0 = contenido0;
+    }
+
+    public static int getAño0() {
+        return año0;
+    }
+
+    public static void setAño0(int año0) {
+        vperfume.año0 = año0;
+    }
+
+    public static String getCasa0() {
+        return casa0;
+    }
+
+    public static void setCasa0(String casa0) {
+        vperfume.casa0 = casa0;
+    }
+    
     
 }
