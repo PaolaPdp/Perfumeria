@@ -11,7 +11,7 @@ import Datos.vperfume;
  */
 public class frmmodificar extends javax.swing.JFrame {    
 
-    double precio0;
+    public double precio0;
     /**
      * Creates new form ModificarPerfume
      */
@@ -200,29 +200,47 @@ public class frmmodificar extends javax.swing.JFrame {
     }//GEN-LAST:event_cbxnombreItemStateChanged
     
     //Metodo encargado de guardar contenido a la memoria pasando parametros
-    public void guardarDatos(double pcio, double cont, int anio, String casa){
-        precio0 = pcio;
-        double contenido0 = cont;
-        int lanzamiento0 = anio;
-        String casa0 = casa;
+    public void guardarDatos(double p, double c, int a, String ca){
+        /*this.precio0 = p;
+        double contenido0 = c;
+        int lanzamiento0 = a;
+        String casa0 = ca;
         
         //imprime los datos editados "Prueba"
-        System.out.println(precio0);
+        System.out.println(this.precio0);*/
+        
+        vperfume.setPrecio0(p);
+        vperfume.setContenido0(c);
+        vperfume.setAño0(a);
+        vperfume.setCasa0(ca);
+        
+        System.out.println(p);
     }
+    
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
         dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
     
     private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
         //se combierte los parametros al tipo de variable del metodo guardarDatos
-        guardarDatos(
+        /*guardarDatos(
                 Double.parseDouble(txtprecio.getText()),
                 Double.parseDouble(txtcontenido.getText()),
                 Integer.parseInt(txtlanzamiento.getText()),
                 txtcasa.getText()
-        );
+        );*/
         //se cierra el dialogo al guardar
         //dispose();
+        String p = txtprecio.getText();
+        String c = txtcontenido.getText();
+        String a = txtlanzamiento.getText();
+        String ca = txtcasa.getText();
+        
+        double pp = Double.parseDouble(p);
+        double cc = Double.parseDouble(c);
+        int aa = Integer.parseInt(a);
+        String caa = ca;
+        guardarDatos(pp, cc, aa, ca);
     }//GEN-LAST:event_btngrabarActionPerformed
 
     /**

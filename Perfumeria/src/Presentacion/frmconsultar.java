@@ -6,7 +6,6 @@
 package Presentacion;
 import Datos.vperfume;
 import java.awt.event.*;
-//import perfumeria.declaracionvariables;
 /**
  *
  * @author Paola

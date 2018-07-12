@@ -23,7 +23,7 @@ public class frmlistar extends javax.swing.JFrame {
         initComponents();
         listDatos.setModel(listado);
     }
- 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,17 +37,24 @@ public class frmlistar extends javax.swing.JFrame {
         listDatos = new javax.swing.JList<>();
         btncerrar = new javax.swing.JButton();
         btnlistar = new javax.swing.JButton();
+        txtresultado = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         listDatos.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "Listado de Perfumes", " ", "Nombre\t\t:", "Precio\t\t:", "Año Lanzamiento\t:", "Casa\t\t:", " " };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        listDatos.setToolTipText("");
         jScrollPane1.setViewportView(listDatos);
 
         btncerrar.setText("Cerrar");
+        btncerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncerrarActionPerformed(evt);
+            }
+        });
 
         btnlistar.setText("Listar");
         btnlistar.addActionListener(new java.awt.event.ActionListener() {
@@ -66,22 +73,26 @@ public class frmlistar extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(77, 77, 77)
                         .addComponent(btncerrar)
-                        .addGap(70, 70, 70)
-                        .addComponent(btnlistar)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGap(75, 75, 75)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtresultado)
+                            .addComponent(btnlistar))))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
+                .addComponent(txtresultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btncerrar)
                     .addComponent(btnlistar))
-                .addGap(15, 15, 15))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -89,22 +100,58 @@ public class frmlistar extends javax.swing.JFrame {
 
     private void btnlistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlistarActionPerformed
         // TODO add your handling code here:
-        String nombre,casa;
-        double precio, contenido;
-        int lanzamiento;
-        
-        nombre = vperfume.nombre0;
-        precio = vperfume.precio0;
-        contenido = vperfume.contenido0;
-        lanzamiento = vperfume.año0;
-        casa = vperfume.casa0;
-
-       listado.addElement(nombre);
-       listado.addElement(precio);
-       listado.addElement(contenido);
-       listado.addElement(lanzamiento);
-       listado.addElement(casa);
+       listado.addElement("Listado de Perfumes");
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("Nombre                       :" + vperfume.nombre0);
+       listado.addElement("Precio                          :" + vperfume.precio0);
+       listado.addElement("Contenido                    :" + vperfume.contenido0);
+       listado.addElement("Año de lanzamiento      :" + vperfume.año0);
+       listado.addElement("Casa                            :" + vperfume.casa0);
+       
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("Nombre                       :" + vperfume.nombre1);
+       listado.addElement("Precio                          :" + vperfume.precio1);
+       listado.addElement("Contenido                    :" + vperfume.contenido1);
+       listado.addElement("Año de lanzamiento      :" + vperfume.año1);
+       listado.addElement("Casa                            :" + vperfume.casa1);
+       
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("Nombre                       :" + vperfume.nombre2);
+       listado.addElement("Precio                          :" + vperfume.precio2);
+       listado.addElement("Contenido                    :" + vperfume.contenido2);
+       listado.addElement("Año de lanzamiento      :" + vperfume.año2);
+       listado.addElement("Casa                            :" + vperfume.casa2);
+       
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("Nombre                       :" + vperfume.nombre3);
+       listado.addElement("Precio                          :" + vperfume.precio3);
+       listado.addElement("Contenido                    :" + vperfume.contenido3);
+       listado.addElement("Año de lanzamiento      :" + vperfume.año3);
+       listado.addElement("Casa                            :" + vperfume.casa3);
+       
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("");
+       listado.addElement("Nombre                       :" + vperfume.nombre4);
+       listado.addElement("Precio                          :" + vperfume.precio4);
+       listado.addElement("Contenido                    :" + vperfume.contenido4);
+       listado.addElement("Año de lanzamiento      :" + vperfume.año4);
+       listado.addElement("Casa                            :" + vperfume.casa4);
+       
+       txtresultado.setText(String.valueOf(vperfume.getPrecio0()));
     }//GEN-LAST:event_btnlistarActionPerformed
+
+    private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btncerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,5 +193,6 @@ public class frmlistar extends javax.swing.JFrame {
     private javax.swing.JButton btnlistar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> listDatos;
+    private javax.swing.JTextField txtresultado;
     // End of variables declaration//GEN-END:variables
 }
