@@ -111,9 +111,19 @@ public class frminicio extends javax.swing.JFrame {
         jMenu7.setText("Configuracion");
 
         jMenuItem7.setText("Configurar descuentos");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem7);
 
         jMenuItem8.setText("Configurar obsequio");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem8);
 
         jMenuItem9.setText("Configurar cantidad optima de perfumes vendidos");
@@ -170,6 +180,18 @@ public class frminicio extends javax.swing.JFrame {
         frmlistar listar = new frmlistar();
         listar.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        frmdescuentos descuentos = new frmdescuentos();
+        descuentos.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        frmobsequio obsequio = new frmobsequio();
+        obsequio.setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments

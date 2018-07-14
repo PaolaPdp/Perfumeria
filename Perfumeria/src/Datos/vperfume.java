@@ -265,5 +265,78 @@ public class vperfume {
     public static void setCasa4(String casa4) {
         vperfume.casa4 = casa4;
     }
+
+    public static double getPorcentaje1() {
+        return porcentaje1;
+    }
+
+    public static void setPorcentaje1(double porcentaje1) {
+        vperfume.porcentaje1 = porcentaje1;
+    }
+
+    public static double getPorcentaje2() {
+        return porcentaje2;
+    }
+
+    public static void setPorcentaje2(double porcentaje2) {
+        vperfume.porcentaje2 = porcentaje2;
+    }
+
+    public static double getPorcentaje3() {
+        return porcentaje3;
+    }
+
+    public static void setPorcentaje3(double porcentaje3) {
+        vperfume.porcentaje3 = porcentaje3;
+    }
+
+    public static double getPorcentaje4() {
+        return porcentaje4;
+    }
+
+    public static void setPorcentaje4(double porcentaje4) {
+        vperfume.porcentaje4 = porcentaje4;
+    }
+
+    public static int getCantidadOptima() {
+        return cantidadOptima;
+    }
+
+    public static void setCantidadOptima(int cantidadOptima) {
+        vperfume.cantidadOptima = cantidadOptima;
+    }
+
+    public static int getImporteMinimoObsequiable() {
+        return importeMinimoObsequiable;
+    }
+
+    public static void setImporteMinimoObsequiable(int importeMinimoObsequiable) {
+        vperfume.importeMinimoObsequiable = importeMinimoObsequiable;
+    }
+
+    public static String getObsequio() {
+        return obsequio;
+    }
+
+    public static void setObsequio(String obsequio) {
+        vperfume.obsequio = obsequio;
+    }
+
+    public static int getNumeroClienteSorpresa() {
+        return numeroClienteSorpresa;
+    }
+
+    public static void setNumeroClienteSorpresa(int numeroClienteSorpresa) {
+        vperfume.numeroClienteSorpresa = numeroClienteSorpresa;
+    }
+
+    public static String getPremioSorpresa() {
+        return premioSorpresa;
+    }
+
+    public static void setPremioSorpresa(String premioSorpresa) {
+        vperfume.premioSorpresa = premioSorpresa;
+    }
+    
     
 }
