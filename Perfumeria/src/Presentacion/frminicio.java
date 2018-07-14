@@ -36,19 +36,19 @@ public class frminicio extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         menusalir = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menuConsultar = new javax.swing.JMenuItem();
+        menuModificar = new javax.swing.JMenuItem();
+        menuListar = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        menuDescuentos = new javax.swing.JMenuItem();
+        menuObsequio = new javax.swing.JMenuItem();
+        menuOptima = new javax.swing.JMenuItem();
+        menuSorpresa = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jMenuItem11 = new javax.swing.JMenuItem();
+        menuAcerca = new javax.swing.JMenuItem();
 
         jMenu1.setText("File");
         jMenuBar2.add(jMenu1);
@@ -72,29 +72,29 @@ public class frminicio extends javax.swing.JFrame {
 
         jMenu4.setText("Mantenimiento");
 
-        jMenuItem3.setText("Consultar perfume");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        menuConsultar.setText("Consultar perfume");
+        menuConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                menuConsultarActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem3);
+        jMenu4.add(menuConsultar);
 
-        jMenuItem1.setText("Modificar perfume");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        menuModificar.setText("Modificar perfume");
+        menuModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                menuModificarActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem1);
+        jMenu4.add(menuModificar);
 
-        jMenuItem4.setText("Listar Perfume");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        menuListar.setText("Listar Perfume");
+        menuListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                menuListarActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem4);
+        jMenu4.add(menuListar);
 
         jMenuBar1.add(jMenu4);
 
@@ -110,49 +110,49 @@ public class frminicio extends javax.swing.JFrame {
 
         jMenu7.setText("Configuracion");
 
-        jMenuItem7.setText("Configurar descuentos");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        menuDescuentos.setText("Configurar descuentos");
+        menuDescuentos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                menuDescuentosActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem7);
+        jMenu7.add(menuDescuentos);
 
-        jMenuItem8.setText("Configurar obsequio");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        menuObsequio.setText("Configurar obsequio");
+        menuObsequio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                menuObsequioActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem8);
+        jMenu7.add(menuObsequio);
 
-        jMenuItem9.setText("Configurar cantidad optima de perfumes vendidos");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        menuOptima.setText("Configurar cantidad optima de perfumes vendidos");
+        menuOptima.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                menuOptimaActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem9);
+        jMenu7.add(menuOptima);
 
-        jMenuItem10.setText("Configurar premio sorpresa");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        menuSorpresa.setText("Configurar premio sorpresa");
+        menuSorpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                menuSorpresaActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem10);
+        jMenu7.add(menuSorpresa);
 
         jMenuBar1.add(jMenu7);
 
         jMenu5.setText("Ayuda");
 
-        jMenuItem11.setText("Acerca de tienda");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+        menuAcerca.setText("Acerca de tienda");
+        menuAcerca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
+                menuAcercaActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem11);
+        jMenu5.add(menuAcerca);
 
         jMenuBar1.add(jMenu5);
 
@@ -172,57 +172,57 @@ public class frminicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void menuModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuModificarActionPerformed
         // TODO add your handling code here:
         frmmodificar modificar=new frmmodificar();
         modificar.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_menuModificarActionPerformed
 
     private void menusalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menusalirActionPerformed
         // TODO add your handling code here:        
         System.exit(0);
     }//GEN-LAST:event_menusalirActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void menuConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuConsultarActionPerformed
         // TODO add your handling code here:
         frmconsultar consultar=new frmconsultar(); 
         consultar.setVisible(true);
         
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_menuConsultarActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void menuListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarActionPerformed
         // TODO add your handling code here:
         frmlistar listar = new frmlistar();
         listar.setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_menuListarActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void menuDescuentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDescuentosActionPerformed
         // TODO add your handling code here:
         frmdescuentos descuentos = new frmdescuentos();
         descuentos.setVisible(true);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_menuDescuentosActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void menuObsequioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuObsequioActionPerformed
         // TODO add your handling code here:
         frmobsequio obsequio = new frmobsequio();
         obsequio.setVisible(true);
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_menuObsequioActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+    private void menuOptimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOptimaActionPerformed
         // TODO add your handling code here:
         frmoptima optimo = new frmoptima();
         optimo.setVisible(true);
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    }//GEN-LAST:event_menuOptimaActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void menuSorpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSorpresaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_menuSorpresaActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+    private void menuAcercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAcercaActionPerformed
         // TODO add your handling code here:
         frmacerca acerca = new frmacerca();
         acerca.setVisible(true);
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
+    }//GEN-LAST:event_menuAcercaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -271,16 +271,16 @@ public class frminicio extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem menuAcerca;
+    private javax.swing.JMenuItem menuConsultar;
+    private javax.swing.JMenuItem menuDescuentos;
+    private javax.swing.JMenuItem menuListar;
+    private javax.swing.JMenuItem menuModificar;
+    private javax.swing.JMenuItem menuObsequio;
+    private javax.swing.JMenuItem menuOptima;
+    private javax.swing.JMenuItem menuSorpresa;
     private javax.swing.JMenuItem menusalir;
     // End of variables declaration//GEN-END:variables
 }
