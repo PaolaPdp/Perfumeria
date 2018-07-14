@@ -9,18 +9,18 @@ import Datos.vperfume;
  *
  * @author Paola
  */
-public class frmmodificar extends javax.swing.JFrame {    
-
-    public double precio0;
+public class frmmodificar extends javax.swing.JFrame {
+    
     /**
      * Creates new form ModificarPerfume
      */
+    
     public frmmodificar() {
         initComponents();
-        combonombre();
+        muestraNombresCBX();
     }
     
-    private void combonombre(){
+    private void muestraNombresCBX(){
         //declaracionvariables cons=new declaracionvariables();
         cbxnombre.addItem(vperfume.nombre0);
         cbxnombre.addItem(vperfume.nombre1);
@@ -29,7 +29,7 @@ public class frmmodificar extends javax.swing.JFrame {
         cbxnombre.addItem(vperfume.nombre4);
     }
     
-    private void categoria(){
+    private void categoriaCero(){
         txtprecio.setText(String.valueOf(vperfume.precio0));
         txtcontenido.setText(String.valueOf(vperfume.contenido0));
         txtlanzamiento.setText(String.valueOf(vperfume.año0));
@@ -64,6 +64,41 @@ public class frmmodificar extends javax.swing.JFrame {
         txtcasa.setText(vperfume.casa1);
     }
  
+    //Metodo encargado de guardar contenido a la memoria pasando parametros
+    public void guardarDatos(double pcioX, double contX, int ltoX, String csaX){
+        
+        //deacuerdo con el indice del combobox se guardara la data.
+        int nNombreindex = cbxnombre.getSelectedIndex();
+        
+        switch(nNombreindex){
+            case 0: vperfume.setPrecio0(pcioX);
+                    vperfume.setContenido0(contX);
+                    vperfume.setAño0(ltoX);
+                    vperfume.setCasa0(csaX);
+                    break;
+            case 1: vperfume.setPrecio1(pcioX);
+                    vperfume.setContenido1(contX);
+                    vperfume.setAño1(ltoX);
+                    vperfume.setCasa1(csaX);
+                    break;
+            case 2: vperfume.setPrecio2(pcioX);
+                    vperfume.setContenido2(contX);
+                    vperfume.setAño2(ltoX);
+                    vperfume.setCasa2(csaX);
+                    break;
+            case 3: vperfume.setPrecio3(pcioX);
+                    vperfume.setContenido3(contX);
+                    vperfume.setAño3(ltoX);
+                    vperfume.setCasa3(csaX);
+                    break;
+            case 4: vperfume.setPrecio4(pcioX);
+                    vperfume.setContenido4(contX);
+                    vperfume.setAño4(ltoX);
+                    vperfume.setCasa4(csaX);
+                    break;
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -187,60 +222,44 @@ public class frmmodificar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbxnombreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxnombreItemStateChanged
-        int opcion = cbxnombre.getSelectedIndex();
+        
+        //Obteniendo los indices de acuerdo a los nombres seleccionados.
+        int nNombreindex = cbxnombre.getSelectedIndex();
          
-         switch(opcion){
-             case 0: categoria(); break;
-             case 1: categoriaUno(); break;
-             case 2: categoriaDos(); break;
-             case 3: categoriaTres(); break;
-             case 4: categoriaCuatro(); break;
-             //default: categoria();
+         switch(nNombreindex){
+            case 0: categoriaCero(); break;
+            case 1: categoriaUno(); break;
+            case 2: categoriaDos(); break;
+            case 3: categoriaTres(); break;
+            case 4: categoriaCuatro(); break;
+            default: categoriaCero();
          }
+         
     }//GEN-LAST:event_cbxnombreItemStateChanged
-    
-    //Metodo encargado de guardar contenido a la memoria pasando parametros
-    public void guardarDatos(double p, double c, int a, String ca){
-        /*this.precio0 = p;
-        double contenido0 = c;
-        int lanzamiento0 = a;
-        String casa0 = ca;
-        
-        //imprime los datos editados "Prueba"
-        System.out.println(this.precio0);*/
-        
-        vperfume.setPrecio0(p);
-        vperfume.setContenido0(c);
-        vperfume.setAño0(a);
-        vperfume.setCasa0(ca);
-        
-        System.out.println(p);
-    }
-    
+
     private void btncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncerrarActionPerformed
         dispose();
     }//GEN-LAST:event_btncerrarActionPerformed
     
     private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
-        //se combierte los parametros al tipo de variable del metodo guardarDatos
-        /*guardarDatos(
-                Double.parseDouble(txtprecio.getText()),
-                Double.parseDouble(txtcontenido.getText()),
-                Integer.parseInt(txtlanzamiento.getText()),
-                txtcasa.getText()
-        );*/
-        //se cierra el dialogo al guardar
-        //dispose();
-        String p = txtprecio.getText();
-        String c = txtcontenido.getText();
-        String a = txtlanzamiento.getText();
-        String ca = txtcasa.getText();
+      
+        //Obteniendo datos del jLabel
+        String sPrecio = txtprecio.getText();
+        String sCotenido = txtcontenido.getText();
+        String sLanzamiento = txtlanzamiento.getText();
+        String sCasa = txtcasa.getText();
         
-        double pp = Double.parseDouble(p);
-        double cc = Double.parseDouble(c);
-        int aa = Integer.parseInt(a);
-        String caa = ca;
-        guardarDatos(pp, cc, aa, ca);
+        //Pasando el contenido String al tipo de variable.
+        double dPrecio = Double.parseDouble(sPrecio);
+        double dContenido = Double.parseDouble(sCotenido);
+        int nContenido = Integer.parseInt(sLanzamiento);
+        
+        //dando como parametros los contenido adqueridos.
+        guardarDatos(dPrecio, dContenido, nContenido, sCasa);
+        
+        //se cierra el dialogo al guardar
+        dispose();
+        
     }//GEN-LAST:event_btngrabarActionPerformed
 
     /**

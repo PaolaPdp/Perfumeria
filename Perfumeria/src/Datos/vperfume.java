@@ -105,6 +105,165 @@ public class vperfume {
     public static void setCasa0(String casa0) {
         vperfume.casa0 = casa0;
     }
-    
+
+    public static String getNombre1() {
+        return nombre1;
+    }
+
+    public static void setNombre1(String nombre1) {
+        vperfume.nombre1 = nombre1;
+    }
+
+    public static double getPrecio1() {
+        return precio1;
+    }
+
+    public static void setPrecio1(double precio1) {
+        vperfume.precio1 = precio1;
+    }
+
+    public static double getContenido1() {
+        return contenido1;
+    }
+
+    public static void setContenido1(double contenido1) {
+        vperfume.contenido1 = contenido1;
+    }
+
+    public static int getAño1() {
+        return año1;
+    }
+
+    public static void setAño1(int año1) {
+        vperfume.año1 = año1;
+    }
+
+    public static String getCasa1() {
+        return casa1;
+    }
+
+    public static void setCasa1(String casa1) {
+        vperfume.casa1 = casa1;
+    }
+
+    public static String getNombre2() {
+        return nombre2;
+    }
+
+    public static void setNombre2(String nombre2) {
+        vperfume.nombre2 = nombre2;
+    }
+
+    public static double getPrecio2() {
+        return precio2;
+    }
+
+    public static void setPrecio2(double precio2) {
+        vperfume.precio2 = precio2;
+    }
+
+    public static double getContenido2() {
+        return contenido2;
+    }
+
+    public static void setContenido2(double contenido2) {
+        vperfume.contenido2 = contenido2;
+    }
+
+    public static int getAño2() {
+        return año2;
+    }
+
+    public static void setAño2(int año2) {
+        vperfume.año2 = año2;
+    }
+
+    public static String getCasa2() {
+        return casa2;
+    }
+
+    public static void setCasa2(String casa2) {
+        vperfume.casa2 = casa2;
+    }
+
+    public static String getNombre3() {
+        return nombre3;
+    }
+
+    public static void setNombre3(String nombre3) {
+        vperfume.nombre3 = nombre3;
+    }
+
+    public static double getPrecio3() {
+        return precio3;
+    }
+
+    public static void setPrecio3(double precio3) {
+        vperfume.precio3 = precio3;
+    }
+
+    public static double getContenido3() {
+        return contenido3;
+    }
+
+    public static void setContenido3(double contenido3) {
+        vperfume.contenido3 = contenido3;
+    }
+
+    public static int getAño3() {
+        return año3;
+    }
+
+    public static void setAño3(int año3) {
+        vperfume.año3 = año3;
+    }
+
+    public static String getCasa3() {
+        return casa3;
+    }
+
+    public static void setCasa3(String casa3) {
+        vperfume.casa3 = casa3;
+    }
+
+    public static String getNombre4() {
+        return nombre4;
+    }
+
+    public static void setNombre4(String nombre4) {
+        vperfume.nombre4 = nombre4;
+    }
+
+    public static double getPrecio4() {
+        return precio4;
+    }
+
+    public static void setPrecio4(double precio4) {
+        vperfume.precio4 = precio4;
+    }
+
+    public static double getContenido4() {
+        return contenido4;
+    }
+
+    public static void setContenido4(double contenido4) {
+        vperfume.contenido4 = contenido4;
+    }
+
+    public static int getAño4() {
+        return año4;
+    }
+
+    public static void setAño4(int año4) {
+        vperfume.año4 = año4;
+    }
+
+    public static String getCasa4() {
+        return casa4;
+    }
+
+    public static void setCasa4(String casa4) {
+        vperfume.casa4 = casa4;
+    }
     
 }

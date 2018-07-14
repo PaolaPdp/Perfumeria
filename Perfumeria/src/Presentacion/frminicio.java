@@ -73,11 +73,6 @@ public class frminicio extends javax.swing.JFrame {
         jMenu4.setText("Mantenimiento");
 
         jMenuItem3.setText("Consultar perfume");
-        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItem3MouseClicked(evt);
-            }
-        });
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -116,11 +111,6 @@ public class frminicio extends javax.swing.JFrame {
         jMenu7.setText("Configuracion");
 
         jMenuItem7.setText("Configurar descuentos");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
         jMenu7.add(jMenuItem7);
 
         jMenuItem8.setText("Configurar obsequio");
@@ -130,11 +120,6 @@ public class frminicio extends javax.swing.JFrame {
         jMenu7.add(jMenuItem9);
 
         jMenuItem10.setText("Configurar premio sorpresa");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
-            }
-        });
         jMenu7.add(jMenuItem10);
 
         jMenuBar1.add(jMenu7);
@@ -168,14 +153,6 @@ public class frminicio extends javax.swing.JFrame {
         modificar.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
-
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
-
     private void menusalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menusalirActionPerformed
         // TODO add your handling code here:        
         System.exit(0);
@@ -183,15 +160,10 @@ public class frminicio extends javax.swing.JFrame {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-        frmconsultar obj=new frmconsultar(); 
-        obj.setVisible(true);
+        frmconsultar consultar=new frmconsultar(); 
+        consultar.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jMenuItem3MouseClicked
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
